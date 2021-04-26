@@ -24,6 +24,7 @@ require 'uri'
 
 # Insert a personal access token (https://github.com/settings/tokens)
 API_TOKEN = File.read('secrets/github-token').chomp
+GITHUB_HOST = File.read('secrets/github-host').chomp
 
 if API_TOKEN.empty?
   puts 'No API token provided'
@@ -34,7 +35,7 @@ RED = 31
 GREEN = 32
 YELLOW = 33
 
-uri = URI('https://api.github.com/graphql')
+uri = URI("#{GITHUB_HOST}/graphql")
 req = Net::HTTP::Post.new(uri)
 req['Authorization'] = "token #{API_TOKEN}"
 req.body = '{ "query": "query { viewer { pullRequests(first: 10, states:OPEN) { nodes { title number url } } } }" }'
