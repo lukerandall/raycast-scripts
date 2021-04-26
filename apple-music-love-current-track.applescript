@@ -12,10 +12,10 @@ tell application "Music"
 	    set track_name to the name of the current track
 		set track_loved to the loved of the current track
 		if track_loved is true then
-			do shell script "echo " & track_name & " is already a loved track"
+			do shell script "echo \"" & track_name & " is already a loved track\""
 		else
 			set loved of current track to true
-			do shell script "echo Loved " & track_name
+			do shell script "echo \"Loved " & track_name & "\""
 		end if
     else
         do shell script "echo No song is currently playing"
