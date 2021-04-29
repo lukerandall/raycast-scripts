@@ -4,7 +4,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Create Document
+# @raycast.title New Document
 # @raycast.mode silent
 
 # Optional parameters:
@@ -12,7 +12,7 @@
 # @raycast.packageName Craft
 
 # @Documentation:
-# @raycast.description Creates a document in Craft
+# @raycast.description Creates a new document in Craft
 # @raycast.author James Lyons
 # @raycast.authorURL https://github.com/jamesjlyons
 
