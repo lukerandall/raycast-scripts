@@ -13,7 +13,7 @@
 # @raycast.icon images/json.png
 
 # Documentation:
-# @raycast.description Displays pretty printed JSON from clipboard.
+# @raycast.description Displays result of running the given jq filter on JSON from clipboard.
 
 # @raycast.argument1 { "type": "text", "placeholder": "Query", "optional": false }
 
