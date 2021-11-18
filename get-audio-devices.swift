@@ -66,7 +66,7 @@ final class AudioDevice {
 		var address = AudioObjectPropertyAddress(
 			mSelector: AudioObjectPropertySelector(kAudioDevicePropertyDeviceNameCFString),
 			mScope: AudioObjectPropertyScope(kAudioObjectPropertyScopeGlobal),
-			mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMaster))
+			mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMain))
 
 		var name: CFString? = nil
 		var propSize = UInt32(MemoryLayout<CFString?>.size)
@@ -85,7 +85,7 @@ func findDevices() -> [AudioDevice] {
 	var address = AudioObjectPropertyAddress(
 		mSelector: AudioObjectPropertySelector(kAudioHardwarePropertyDevices),
 		mScope: AudioObjectPropertyScope(kAudioObjectPropertyScopeGlobal),
-		mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMaster))
+		mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMain))
 
 	var propSize: UInt32 = 0
 	var result = AudioObjectGetPropertyDataSize(
@@ -136,7 +136,7 @@ func selectedDevice(output: Bool) -> String? {
 	var idPropertyAddress = AudioObjectPropertyAddress(
 		mSelector: AudioObjectPropertySelector(selector),
 		mScope: AudioObjectPropertyScope(kAudioObjectPropertyScopeGlobal),
-		mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMaster))
+		mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMain))
 
 	let result = AudioObjectGetPropertyData(
 		id,
