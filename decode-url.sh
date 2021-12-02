@@ -2,15 +2,15 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Decode URL
+# @raycast.title URL Decode Clipboard
 # @raycast.mode silent
 # @raycast.packageName Developer Utilities
 
 # Optional parameters:
-# @raycast.icon 💻
+# @raycast.icon ./images/tag.png
 
 # Documentation:
-# @raycast.description Decodes clipboard content url and copies it again.
+# @raycast.description URL decodes clipboard content and puts it back on the clipboard
 
 function urldecode() {
     local url_encoded="${1//+/ }"
@@ -18,4 +18,4 @@ function urldecode() {
 }
 
 urldecode $(pbpaste) | pbcopy
-echo "Decoded URL"
+echo $(pbpaste)

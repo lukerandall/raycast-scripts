@@ -5,8 +5,7 @@
 # @raycast.authorURL https://github.com/vincentdoerig
 # @raycast.description Toggle your Wi-Fi connection.
 
-# @raycast.icon images/wifi-dark.png
-# @raycast.iconDark images/wifi.png
+# @raycast.icon images/wifi-alt.png
 # @raycast.mode silent
 # @raycast.packageName System
 # @raycast.schemaVersion 1

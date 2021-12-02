@@ -2,15 +2,15 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Decode Base64
+# @raycast.title Base64 Decode Clipboard
 # @raycast.mode silent
 # @raycast.packageName Developer Utilities
 
 # Optional parameters:
-# @raycast.icon 💻
+# @raycast.icon ./images/encode.png
 
 # Documentation:
-# @raycast.description Decodes clipboard content to Base64 and copies it again.
+# @raycast.description Base64 decodes clipboard content and puts it back on the clipboard
 
 pbpaste | base64 -d | pbcopy
-echo "Decoded"
+echo $(pbpaste)

@@ -5,7 +5,7 @@
 # @raycast.schemaVersion 1
 # @raycast.author Luke Randall
 # @raycast.authorURL https://github.com/lukerandall
-# @raycast.title Clipboard → jq
+# @raycast.title Clipboard JSON → jq
 # @raycast.mode fullOutput
 # @raycast.packageName Developer Utilities
 
